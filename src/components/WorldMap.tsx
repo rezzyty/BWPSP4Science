@@ -4,6 +4,7 @@ import { CHAPTER_INFO, getQuestionsByChapterAndType } from '../data/questionBank
 import { CHARACTERS } from '../data/characters';
 import { sound } from '../utils/soundEffects';
 import { Star, CheckCircle, Play, Sparkles, BookCheck, ShieldAlert, Award, Compass, Layers } from 'lucide-react';
+import { LeaderboardChart } from './LeaderboardChart';
 
 interface WorldMapProps {
   gameState: UserGameState;
@@ -124,6 +125,9 @@ export const WorldMap: React.FC<WorldMapProps> = ({
           🏰
         </div>
       </div>
+
+      {/* D3.js Leaderboard Chart */}
+      <LeaderboardChart gameState={gameState} />
 
       {/* Mode Navigation Tabs */}
       <div className="flex items-center justify-center sm:justify-start gap-2 border-b-2 border-slate-700/60 pb-2">

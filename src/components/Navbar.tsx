@@ -9,6 +9,7 @@ interface NavbarProps {
   onOpenSaveModal: () => void;
   onOpenShopModal: () => void;
   onOpenCertificateModal: () => void;
+  onOpenAchievements: () => void;
   onOpenMistakes: () => void;
   onReturnToHome: () => void;
   activeView: string;
@@ -19,6 +20,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   onOpenSaveModal,
   onOpenShopModal,
   onOpenCertificateModal,
+  onOpenAchievements,
   onOpenMistakes,
   onReturnToHome,
   activeView,
@@ -133,6 +135,19 @@ export const Navbar: React.FC<NavbarProps> = ({
             <span className="bg-blue-950 text-cyan-300 px-1.5 py-0.5 rounded font-mono text-xs tracking-wider">
               {gameState.saveCode}
             </span>
+          </button>
+
+          {/* Achievements */}
+          <button
+            onClick={() => {
+              sound.playJump();
+              onOpenAchievements();
+            }}
+            title="成就系統與徽章"
+            className="p-1.5 sm:p-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-amber-400 border border-slate-700 flex items-center gap-1 font-bold text-xs"
+          >
+            <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-amber-300" />
+            <span className="hidden lg:inline">成就</span>
           </button>
 
           {/* Certificate */}

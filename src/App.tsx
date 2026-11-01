@@ -21,6 +21,7 @@ import { SaveSyncModal } from './components/SaveSyncModal';
 import { PowerUpModal } from './components/PowerUpModal';
 import { MistakesNotebook } from './components/MistakesNotebook';
 import { CertificateModal } from './components/CertificateModal';
+import { AchievementsModal } from './components/AchievementsModal';
 import { StageCompleteModal } from './components/StageCompleteModal';
 import { sound } from './utils/soundEffects';
 
@@ -41,6 +42,7 @@ export default function App() {
   const [shopModalOpen, setShopModalOpen] = useState(false);
   const [mistakesModalOpen, setMistakesModalOpen] = useState(false);
   const [certificateModalOpen, setCertificateModalOpen] = useState(false);
+  const [achievementsModalOpen, setAchievementsModalOpen] = useState(false);
   const [stageCompleteOpen, setStageCompleteOpen] = useState(false);
   const [lastCompletedResult, setLastCompletedResult] = useState<{
     score: number;
@@ -203,6 +205,7 @@ export default function App() {
         onOpenSaveModal={() => setSaveModalOpen(true)}
         onOpenShopModal={() => setShopModalOpen(true)}
         onOpenCertificateModal={() => setCertificateModalOpen(true)}
+        onOpenAchievements={() => setAchievementsModalOpen(true)}
         onOpenMistakes={() => setMistakesModalOpen(true)}
         onReturnToHome={() => {
           setActiveScreen('map');
@@ -281,6 +284,12 @@ export default function App() {
       <CertificateModal
         isOpen={certificateModalOpen}
         onClose={() => setCertificateModalOpen(false)}
+        gameState={gameState}
+      />
+
+      <AchievementsModal
+        isOpen={achievementsModalOpen}
+        onClose={() => setAchievementsModalOpen(false)}
         gameState={gameState}
       />
 

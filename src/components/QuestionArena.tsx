@@ -168,11 +168,12 @@ export const QuestionArena: React.FC<QuestionArenaProps> = ({
       setStageCoins((prev) => prev + coinEarned);
       setCorrectCount((prev) => prev + 1);
 
-      // Update state coins immediately
+      // Update state coins and total correct answers immediately
       onUpdateState({
         ...gameState,
         coins: gameState.coins + coinEarned,
         score: gameState.score + points,
+        totalCorrectAnswers: (gameState.totalCorrectAnswers || 0) + 1,
       });
     } else {
       // Check for Super Mushroom Shield

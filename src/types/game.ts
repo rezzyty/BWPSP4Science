@@ -116,6 +116,7 @@ export interface UserGameState {
   lives: number;
   stars: number;
   score: number;
+  totalCorrectAnswers?: number;
   selectedCharacter: string;
   inventory: Record<string, number>; // powerUpId -> count
   completedStages: Record<string, { stars: number; score: number; passedAt: string }>;
