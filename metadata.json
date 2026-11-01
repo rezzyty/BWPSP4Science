@@ -1,0 +1,6 @@
+{
+  "name": "瑪利歐科學大冒險 - 小四科學認識地球歷險記",
+  "description": "專為香港小學四年級學生設計的常識/科學科互動複習闖關遊戲，涵蓋單元一第1至3課（地球結構、轉動地球、天氣氣候）。由碧姬公主、耀西、黛西公主、羅潔塔公主及咚奇剛陪伴挑戰選擇、填充、供詞填充、判斷及配對題，支援跨裝置雲端進度儲存。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

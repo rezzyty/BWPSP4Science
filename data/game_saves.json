@@ -1,0 +1,12 @@
+{
+  "MARIO9": {
+    "code": "MARIO9",
+    "studentName": "陳小明",
+    "data": {
+      "score": 500,
+      "stars": 5,
+      "coins": 120
+    },
+    "updatedAt": "2026-11-01T02:34:25.080Z"
+  }
+}

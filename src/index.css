@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+:root {
+  font-family: 'Noto Sans TC', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mario: 'Fredoka', 'Noto Sans TC', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #5c94fc; /* Classic Super Mario Overworld Sky Blue */
+  color: #1f2937;
+  overflow-x: hidden;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Retro Nintendo / Mario 3D Button Press Effect */
+.mario-btn-red {
+  background: linear-gradient(to bottom, #ff4e50, #e52521);
+  box-shadow: 0 6px 0 #991b1b, 0 8px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.1s ease;
+}
+.mario-btn-red:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #991b1b, 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.mario-btn-green {
+  background: linear-gradient(to bottom, #4ade80, #16a34a);
+  box-shadow: 0 6px 0 #14532d, 0 8px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.1s ease;
+}
+.mario-btn-green:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #14532d, 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.mario-btn-yellow {
+  background: linear-gradient(to bottom, #fde047, #f59e0b);
+  box-shadow: 0 6px 0 #b45309, 0 8px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.1s ease;
+}
+.mario-btn-yellow:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #b45309, 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.mario-btn-blue {
+  background: linear-gradient(to bottom, #60a5fa, #2563eb);
+  box-shadow: 0 6px 0 #1e3a8a, 0 8px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.1s ease;
+}
+.mario-btn-blue:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #1e3a8a, 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.mario-btn-purple {
+  background: linear-gradient(to bottom, #c084fc, #9333ea);
+  box-shadow: 0 6px 0 #581c87, 0 8px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.1s ease;
+}
+.mario-btn-purple:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #581c87, 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Question Block Style Card */
+.mario-card {
+  border: 4px solid #1e293b;
+  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 1.25rem;
+}
+
+.mario-brick {
+  background-color: #b91c1c;
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(0,0,0,0.15) 0px,
+    rgba(0,0,0,0.15) 2px,
+    transparent 2px,
+    transparent 16px
+  );
+}
+
+/* Custom Animation for Stars and Coins */
+@keyframes coin-spin {
+  0% { transform: scaleX(1); }
+  50% { transform: scaleX(0.15); }
+  100% { transform: scaleX(1); }
+}
+
+.animate-coin {
+  animation: coin-spin 0.8s infinite ease-in-out;
+}
+
+@keyframes mario-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-mario-bounce {
+  animation: mario-bounce 1.5s infinite ease-in-out;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb {
+  background: #f59e0b;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d97706;
+}
+
